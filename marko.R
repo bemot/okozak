@@ -1,5 +1,7 @@
-library(gdata)                   # load gdata package 
-mydata = read.xls("/home/sasha/ECONOMICS/IAE/OlgaKozak/7.xls")  # read from first sheet
+library(gdata)
+# load gdata package 
+setwd("/home/alex/ECONOMICS/IAE/OLGA_KOZAK/2019_AIDS/okozak")
+mydata = read.xls("7.xls")  # read from first sheet
 library(micEcon)
 library(micEconAids)
 priceNames <- c( "p_bread","p_meat","p_fish","p_milk_cheese", "p_butter", "p_oil", "p_sugar")
@@ -11,6 +13,3 @@ elas( estResult )
 summary(estResult )
 lrtest(estResult,estResult)
 checkConsist( estResult )
-
-
-
